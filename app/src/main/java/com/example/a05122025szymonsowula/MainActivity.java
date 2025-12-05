@@ -1,6 +1,7 @@
 package com.example.a05122025szymonsowula;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -33,6 +34,16 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkSpecialCharacters = findViewById(R.id.specialCharacters);
         Button generateBtn = findViewById(R.id.generatePassword);
         Button confirmBtn = findViewById(R.id.confirmbutton);
+
+        String[] options = {"Kierownik", "Starszy programista", "Młodszy programista", "Tester"};
+
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_spinner_item,
+                options
+        );
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        spinnerBtn.setAdapter(spinnerAdapter);
 
     }
 }
