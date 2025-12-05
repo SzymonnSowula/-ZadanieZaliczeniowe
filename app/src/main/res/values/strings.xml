@@ -6,4 +6,9 @@
     <string name="dane_pracownika">Dane Pracownika</string>
     <string name="stanowisko">Stanowisko</string>
     <string name="generowanie_has_a">Generowanie Hasła</string>
+    <string name="ma_e_i_wielkie_litery">Małe i wielkie litery</string>
+    <string name="cyfry">Cyfry</string>
+    <string name="znaki_specjalne">Znaki Specjalne</string>
+    <string name="generuj_has_o">Generuj hasło</string>
+    <string name="zatwierd">Zatwierdź</string>
 </resources>

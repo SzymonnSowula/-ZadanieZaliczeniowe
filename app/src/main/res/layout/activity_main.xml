@@ -6,24 +6,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="12dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dane_pracownika"
+        android:textSize="20sp"
+        android:textStyle="bold"
         />
 
     <EditText
         android:id="@+id/editImie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/darker_gray"
         android:ems="10"
         android:inputType="text"
         android:text="@string/imie" />
     <EditText
         android:id="@+id/editNazwisko"
         android:layout_width="match_parent"
+        android:textColor="@android:color/darker_gray"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
@@ -36,10 +41,12 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/stanowisko" />
+            android:text="@string/stanowisko"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinner"
@@ -47,20 +54,62 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp">
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:text="@string/generowanie_has_a" />
 
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        <EditText
+            android:id="@+id/editTextText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:inputType="text"
+            android:text="@string/IloscZnakow"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="15sp" />
 
+    <CheckBox
+        android:id="@+id/lowerAndUpperCase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ma_e_i_wielkie_litery" />
+
+    <CheckBox
+        android:id="@+id/numbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cyfry" />
+
+    <CheckBox
+        android:id="@+id/specialCharacters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/znaki_specjalne" />
+
+    <Button
+        android:id="@+id/generatePassword"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="@string/generuj_has_o"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/zatwierd"
+        android:backgroundTint="@color/blue"/>
 
 </LinearLayout>
