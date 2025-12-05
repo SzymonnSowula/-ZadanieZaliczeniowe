@@ -10,6 +10,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         Button confirmBtn = findViewById(R.id.confirmbutton);
         EditText ileZnakow = findViewById(R.id.iloscZnakow);
 
+
         String[] options = {"Kierownik", "Starszy programista", "Młodszy programista", "Tester"};
 
         ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(
@@ -66,6 +68,46 @@ public class MainActivity extends AppCompatActivity {
                 StringBuilder haslo = new StringBuilder();
                 Random random = new Random();
                 StringBuilder hasloBuild = new StringBuilder();
+
+
+                if (checkLowerUpperCase.isChecked()) {
+                    haslo.append(maleLitery);
+                }
+
+                if(checkNumbers.isChecked()) {
+                    haslo.append(cyfry);
+                }
+                if (checkSpecialCharacters.isChecked()){
+                    haslo.append(znakiSpecjalne);
+                }
+
+
+                for(int i = 0; i < dlugosc; i++) {
+                    int index = random.nextInt(haslo.length());
+                    char wylosowanyZnak = haslo.charAt(index);
+
+                    hasloBuild.append(wylosowanyZnak);
+                }
+
+
+                String wygenerowaneHaslo = hasloBuild.toString();
+
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("wygenerowane haslo");
+                builder.setMessage("haslo:");
+
+            }
+
+        });
+
+
+
+        confirmBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String imie = editImie.getText().toString();
+                String nazwisko = editNazwisko.getText().toString();
 
             }
         });
