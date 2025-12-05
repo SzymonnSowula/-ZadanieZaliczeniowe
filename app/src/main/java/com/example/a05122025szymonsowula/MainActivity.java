@@ -1,17 +1,21 @@
 package com.example.a05122025szymonsowula;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkSpecialCharacters = findViewById(R.id.specialCharacters);
         Button generateBtn = findViewById(R.id.generatePassword);
         Button confirmBtn = findViewById(R.id.confirmbutton);
+        EditText ileZnakow = findViewById(R.id.iloscZnakow);
 
         String[] options = {"Kierownik", "Starszy programista", "Młodszy programista", "Tester"};
 
@@ -44,6 +49,27 @@ public class MainActivity extends AppCompatActivity {
         );
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         spinnerBtn.setAdapter(spinnerAdapter);
+
+        generateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String ileStr = ileZnakow.getText().toString();
+                if (ileStr.isEmpty())
+                    return;
+
+                int dlugosc = Integer.parseInt(ileStr);
+
+                String maleLitery = "abcdefghijklmnoprstuwyxz";
+                String wielkieLitery = "ABCDEFGHIJKLMNOPRSTUWYXZ";
+                String cyfry = "0123456789";
+                String znakiSpecjalne = "!@#$%^&*()_+";
+                StringBuilder haslo = new StringBuilder();
+                Random random = new Random();
+                StringBuilder hasloBuild = new StringBuilder();
+
+            }
+        });
+
 
     }
 }
