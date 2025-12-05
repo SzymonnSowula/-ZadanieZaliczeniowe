@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">05122025SzymonSowula</string>
+    <string name="imie">Imię</string>
+    <string name="nazwisko">Nazwisko</string>
+    <string name="IloscZnakow">Ile znaków?</string>
+    <string name="dane_pracownika">Dane Pracownika</string>
+    <string name="stanowisko">Stanowisko</string>
+</resources>
