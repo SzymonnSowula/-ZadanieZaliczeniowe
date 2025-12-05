@@ -1,7 +1,10 @@
 package com.example.a05122025szymonsowula;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        EditText editImie = findViewById(R.id.editImie);
+        EditText editNazwisko = findViewById(R.id.editNazwisko);
+        Spinner spinnerBtn = findViewById(R.id.spinner);
+        CheckBox checkLowerUpperCase = findViewById(R.id.lowerAndUpperCase);
+        CheckBox checkNumbers = findViewById(R.id.numbers);
+        CheckBox checkSpecialCharacters = findViewById(R.id.specialCharacters);
+        Button generateBtn = findViewById(R.id.generatePassword);
+        Button confirmBtn = findViewById(R.id.confirmbutton);
 
     }
 }
