@@ -30,7 +30,7 @@
         android:text="@string/nazwisko" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
 
@@ -47,7 +47,20 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
     </LinearLayout>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/generowanie_has_a" />
 
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
 
 
 </LinearLayout>

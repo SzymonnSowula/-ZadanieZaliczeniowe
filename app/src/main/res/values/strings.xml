@@ -5,4 +5,5 @@
     <string name="IloscZnakow">Ile znaków?</string>
     <string name="dane_pracownika">Dane Pracownika</string>
     <string name="stanowisko">Stanowisko</string>
+    <string name="generowanie_has_a">Generowanie Hasła</string>
 </resources>
